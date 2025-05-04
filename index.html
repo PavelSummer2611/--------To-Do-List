@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>YeaPlanner</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<h1>YeaPlanner</h1>
+		<div class="todo-container">
+			<div class="todo-wrapper">
+				<form class="todo-form" id="todo-form">
+					<label for="task-input">Новая задача:</label>
+					<input
+						type="text"
+						id="task-input"
+						placeholder="Введите задачу"
+						required
+					/>
+					<button type="submit">Добавить</button>
+				</form>
+				<div class="todo-filter">
+					<label>
+						<input type="radio" name="filter" value="all" checked />
+						Все
+					</label>
+					<label>
+						<input type="radio" name="filter" value="completed" />
+						Выполненные
+					</label>
+					<label>
+						<input type="radio" name="filter" value="pending" />
+						Не выполненные
+					</label>
+				</div>
+			</div>
+
+			<ul class="task-list" id="task-list"></ul>
+		</div>
+		<div class="switchTheme">
+			<div class="theme-label" id="themeLabel">Day</div>
+			<div class="theme-toggle" id="earthToggle"></div>
+		</div>
+
+		<script type="module" src="app.js"></script>
+	</body>
+</html>
